@@ -1,2 +1,2 @@
 # DroneNet
-Comprehensive image database of drones, labeled.
+2664 images of drones with bounding box labeled in YOLO format annotations.
