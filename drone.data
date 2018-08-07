@@ -1,0 +1,5 @@
+classes = 1
+train = /home/[user name]/[path to darknet]/train.txt
+valid = /home/[user name]/[path to darknet]/test.txt
+names = /home/[user name]/[path to darknet]/cfg/drone.names
+backup = backup/
