@@ -16,7 +16,9 @@ cd darknet
 make
 ```
 
-3. Move **yolo-drone.data** under the **cfg** folder, move **yolo-drone.cfg** under the **cfg** folder, create a **weights** directory and move **yolo-drone.weights** into the folder, and move **drone.jpg** under the **data** folder.
+3. Move **drone.data**, **drone.names**, and **yolo-drone.cfg** under the **cfg** folder, create a **weights** directory and move **yolo-drone.weights** into the folder, move **drone.jpg** under the **data** folder, and move **test.txt** and **train.txt** in the root directory of your cloned darknet.
+
+4. Change lines 2 and 3 to your path in **drone.data**.
 
 ---
 
