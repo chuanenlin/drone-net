@@ -9,22 +9,14 @@ The original and labeled images used for retraining can be found under the **ima
 
 1. Install the [Ubuntu](https://www.ubuntu.com/) Linux distribution.
 
-2. Install [Python 2.7](https://www.python.org/downloads/release/python-2714/)
-
-3. Open terminal and enter the following lines to build [Darknet](https://pjreddie.com/darknet/):
+2. Open terminal and enter the following lines to build [Darknet](https://pjreddie.com/darknet/):
 ```
 git clone https://github.com/pjreddie/darknet.git
 cd darknet
 make
 ```
 
-4. Move **yolo-drone.data** under the **cfg** folder.
-
-5. Move **yolo-drone.cfg** under the **cfg** folder.
-
-6. Create a **weights** directory and move **yolo-drone.weights** into the folder.
-
-6. Put **drone.jpg** under the **data** folder.
+3. Move **yolo-drone.data** under the **cfg** folder, move **yolo-drone.cfg** under the **cfg** folder, create a **weights** directory and move **yolo-drone.weights** into the folder, and move **drone.jpg** under the **data** folder.
 
 ---
 
