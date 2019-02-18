@@ -26,7 +26,7 @@ make
 
 Open terminal in the root directory of the **darknet** executable and enter:
 ```
-./darknet detector test cfg/yolo-drone.data cfg/yolo-drone.cfg weights/yolo-drone.weights data/drone.jpg
+./darknet detector test cfg/drone.data cfg/yolo-drone.cfg weights/yolo-drone.weights data/drone.jpg
 ```
 
 ---
