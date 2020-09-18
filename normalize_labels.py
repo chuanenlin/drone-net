@@ -31,7 +31,7 @@ for filename in os.listdir(img_dir):
         with open(lab_path, "r") as f:
             # there may be multiple bboxes, hence multiple lines
             split_lines = [l.strip().split() for l in f.readlines()]
-            labels = [map(float, l] for l in split_lines])
+            labels = [map(float, l) for l in split_lines])
 
         # Create normalized label
         norm_labels = [normalize_label(label, width, height) for label in labels]
