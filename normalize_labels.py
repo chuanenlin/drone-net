@@ -27,17 +27,20 @@ for filename in os.listdir(img_dir):
         im = Image.open(im_path)
         width, height = im.size
 
-        # Open label
+        # Open labels
         with open(lab_path, "r") as f:
-            label = map(float, f.readline().rstrip('\n').split(' '))
+            # there may be multiple bboxes, hence multiple lines
+            split_lines = [l.strip().split() for l in f.readlines()]
+            labels = [map(float, l] for l in split_lines])
 
         # Create normalized label
-        norm_label = normalize_label(label, width, height)
+        norm_labels = [normalize_label(label, width, height) for label in labels]
 
         # Save new label
         with open(norm_lab_path, "w") as f:
-            str_norm_label = ' '.join(map(str, [norm_label[0]]) + ['{:.6f}'.format(x) for x in norm_label[1:]])
-            f.write(str_norm_label)
+            for norm_label in norm_labels:
+                c, x, y, w, h = norm_label
+                print(f"{int(c)} {x} {y} {w} {h}", file=f)
             # print(str_norm_label)
 
         # print(im_path, width, height, label, norm_label)
